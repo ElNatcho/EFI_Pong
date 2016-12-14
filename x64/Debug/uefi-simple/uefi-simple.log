@@ -1,0 +1,6 @@
+﻿  main.c
+..\main.c(35): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
+..\main.c(36): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
+..\main.c(37): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
+  uefi-simple.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Debug\uefi-simple.efi
+  uefi-simple.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Debug\uefi-simple.pdb (Partial PDB)

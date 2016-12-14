@@ -1,0 +1,31 @@
+﻿  boxdraw.c
+  cmdline.c
+  console.c
+  crc.c
+  data.c
+  debug.c
+  dpath.c
+  error.c
+  event.c
+  guid.c
+  hand.c
+  hw.c
+  init.c
+  lock.c
+  misc.c
+  print.c
+  efirtlib.c
+  rtdata.c
+  rtlock.c
+  rtstr.c
+  Generating Code...
+  Compiling...
+  vm.c
+  smbios.c
+  sread.c
+  str.c
+  Generating Code...
+  initplat.c
+  math.c
+  Generating Code...
+  gnu-efi.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Release\gnu-efi.lib
