@@ -9,6 +9,7 @@ void setupGame(Shape *background) {
 	p2_score = 0;
 }
 
+
 //////////////////////
 // -- setupCollider --
 void setupCollider(Shape *background) {
