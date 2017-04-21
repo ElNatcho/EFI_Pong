@@ -1,7 +1,10 @@
-﻿  main.c
-..\main.c(42): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
-..\main.c(43): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
-..\main.c(44): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
-..\main.c(140): warning C4244: 'function': conversion from 'UINTN' to 'INT32', possible loss of data
-  uefi-simple.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Release\uefi-simple.efi
-  uefi-simple.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Release\uefi-simple.pdb (Full PDB)
+﻿  GameLogic.c
+..\GameLogic.c(41): warning C4013: "checkForCollision" undefiniert; Annahme: extern mit Rückgabetyp int
+..\GameLogic.c(50): warning C4013: "checkForCollision_b" undefiniert; Annahme: extern mit Rückgabetyp int
+  main.c
+h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shape.h(21): error C2011: "_Vector": "struct" Typneudefinition
+  h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shapes.h(24): note: Siehe Deklaration von "_Vector"
+h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shape.h(30): error C2011: "_Shape": "struct" Typneudefinition
+  h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shapes.h(31): note: Siehe Deklaration von "_Shape"
+..\main.c(86): warning C4244: "Funktion": Konvertierung von "UINTN" in "INT32", möglicher Datenverlust
+  Code wird generiert...

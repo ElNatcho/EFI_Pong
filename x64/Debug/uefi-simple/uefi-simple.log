@@ -1,6 +1,12 @@
 ﻿  main.c
-..\main.c(35): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
-..\main.c(36): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
-..\main.c(37): warning C4244: '=': conversion from 'UINTN' to 'UINT8', possible loss of data
-  uefi-simple.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Debug\uefi-simple.efi
-  uefi-simple.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Debug\uefi-simple.pdb (Partial PDB)
+..\main.c(74): warning C4133: "Funktion": Inkompatible Typen - von "Shape *" zu "Bound *"
+..\main.c(75): warning C4244: "Funktion": Konvertierung von "UINTN" in "INT32", möglicher Datenverlust
+  Shapes.c
+..\Shapes.c(10): warning C4244: "=": Konvertierung von "UINTN" in "UINT8", möglicher Datenverlust
+..\Shapes.c(11): warning C4244: "=": Konvertierung von "UINTN" in "UINT8", möglicher Datenverlust
+..\Shapes.c(12): warning C4244: "=": Konvertierung von "UINTN" in "UINT8", möglicher Datenverlust
+..\Shapes.c(45): warning C4244: "Funktion": Konvertierung von "UINTN" in "int", möglicher Datenverlust
+..\Shapes.c(46): warning C4244: "Funktion": Konvertierung von "UINTN" in "int", möglicher Datenverlust
+  Code wird generiert...
+Shapes.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "abs" in Funktion "checkForCollision".
+H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Debug\uefi-simple.efi : fatal error LNK1120: 1 nicht aufgelöste Externe
