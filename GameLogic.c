@@ -3,7 +3,7 @@
 //////////////////
 // -- setupGame --
 //
-void setupGame(Shape *background) {
+void setupGame(struct Shape *background) {
 	setupCollider(background);
 	p1_score = 0;
 	p2_score = 0;
@@ -12,7 +12,7 @@ void setupGame(Shape *background) {
 
 //////////////////////
 // -- setupCollider --
-void setupCollider(Shape *background) {
+void setupCollider(struct Shape *background) {
 	// Collider des linken Spielers aufsetzen
 	leftCollider.left   = background->bound.left;
 	leftCollider.top    = background->bound.top;
@@ -37,7 +37,7 @@ void setupCollider(Shape *background) {
 
 //////////////////////
 // -- manageBallCol --
-void manageBallCol(Shape *ball, Shape *background, Shape *pad_1, Shape *pad_2, Vector *ballMovVec) {
+void manageBallCol(struct Shape *ball, struct Shape *background, struct Shape *pad_1, struct Shape *pad_2, struct Vector *ballMovVec) {
 	// Testen ob der Ball noch auf dem Spielfeld ist
 	if (checkForCollision(ball->bound.left, ball->bound.top, ball->bound.width, ball->bound.height,
 						0, 0, background->bound.width - 10, background->bound.top - 10) == TRUE) {
@@ -48,8 +48,8 @@ void manageBallCol(Shape *ball, Shape *background, Shape *pad_1, Shape *pad_2, V
 		else if (managePaddleCol(pad_2, ball, ballMovVec, -1)) {
 			return;
 		} // Testen ob der Ball mit dem oberen oder unteren Collider kollidiert
-		else if (checkForCollision_b(ball, bottomCollider) ||
-			checkForCollision_b(ball, topCollider)) {
+		else if (checkForCollision_b(ball, &bottomCollider) ||
+			checkForCollision_b(ball, &topCollider)) {
 			ballMovVec->y *= -1;
 			return;
 		} 
@@ -70,7 +70,7 @@ void manageBallCol(Shape *ball, Shape *background, Shape *pad_1, Shape *pad_2, V
 
 ////////////////////////
 // -- managePaddleCol --
-BOOLEAN managePaddleCol(Shape *pad, Shape *ball, Vector *ballMovVec, UINTN xdir) {
+BOOLEAN managePaddleCol(struct Shape *pad, struct Shape *ball, struct Vector *ballMovVec, UINTN xdir) {
 	UINTN tempH = pad->bound.height / 5;
 	// Testen ob der Ball mit dem obersten Bereich des Paddles kollidiert
 	if (checkForCollision(pad->bound.left, pad->bound.top, pad->bound.width, tempH,
@@ -109,7 +109,7 @@ BOOLEAN managePaddleCol(Shape *pad, Shape *ball, Vector *ballMovVec, UINTN xdir)
 
 //////////////////
 // -- resetBall --
-void resetBall(Shape background, Shape *ball, Vector *moveVec) {
+void resetBall(struct Shape background, struct Shape *ball, struct Vector *moveVec) {
 	moveVec->x = 0;
 	moveVec->y = 0;
 	ball->bound.left   = background.bound.width  / 2 - ball->bound.width  / 2;

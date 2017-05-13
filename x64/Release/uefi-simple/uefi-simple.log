@@ -1,10 +1,8 @@
 ﻿  GameLogic.c
-..\GameLogic.c(41): warning C4013: "checkForCollision" undefiniert; Annahme: extern mit Rückgabetyp int
-..\GameLogic.c(50): warning C4013: "checkForCollision_b" undefiniert; Annahme: extern mit Rückgabetyp int
-  main.c
-h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shape.h(21): error C2011: "_Vector": "struct" Typneudefinition
-  h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shapes.h(24): note: Siehe Deklaration von "_Vector"
-h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shape.h(30): error C2011: "_Shape": "struct" Typneudefinition
-  h:\-xx cpp projekts xx-\uefi_programming\_efi_pong\uefi-simple\Shapes.h(31): note: Siehe Deklaration von "_Shape"
-..\main.c(86): warning C4244: "Funktion": Konvertierung von "UINTN" in "INT32", möglicher Datenverlust
-  Code wird generiert...
+..\GameLogic.c(51): warning C4133: "Funktion": Inkompatible Typen - von "Shape *" zu "Bound *"
+..\GameLogic.c(52): warning C4133: "Funktion": Inkompatible Typen - von "Shape *" zu "Bound *"
+..\GameLogic.c(58): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "Bound *" und "Shape **" unterschiedlich
+..\GameLogic.c(58): warning C4024: "checkForCollision_b": unterschiedliche Typen für formalen und übergebenen Parameter 2
+..\GameLogic.c(62): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "Bound *" und "Shape **" unterschiedlich
+..\GameLogic.c(62): warning C4024: "checkForCollision_b": unterschiedliche Typen für formalen und übergebenen Parameter 2
+  uefi-simple.vcxproj -> H:\-xX CPP PROJEKTS Xx-\UEFI_PROGRAMMING\_EFI_PONG\uefi-simple\x64\Release\uefi-simple.efi

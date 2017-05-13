@@ -24,12 +24,12 @@ EFI_STATUS EFIAPI efi_main(EFI_HANDLE image, EFI_SYSTEM_TABLE *systab)
 
 	BOOLEAN gameBegan = FALSE;
 
-	Shape pad_1; // Paddle of the first player
-	Shape pad_2; // Paddle of the second player
-	Shape background; // Background
+	struct Shape pad_1; // Paddle of the first player
+	struct Shape pad_2; // Paddle of the second player
+	struct Shape background; // Background
 
-	Shape ball;  // Ball
-	Vector ballMoveVector; // Move vector of the ball
+	struct Shape  ball;  // Ball
+	struct Vector ballMoveVector; // Move vector of the ball
 	ballMoveVector.x = 0;
 	ballMoveVector.y = 0;
 

@@ -10,7 +10,7 @@
 #include<efi.h>
 #include<efilib.h>
 
-#include"Shape.h"
+#include"Shapes.h"
 
 #define BALL_MOVE_SPEED_X 10
 #define BALL_MOVE_SPEED_Y 10
@@ -20,7 +20,7 @@
 // dem Boden des Spielfelds befindet oder um zu prüfen ob ein Spieler den Ball
 // durchgelassen hat
 //
-_Bound topCollider, bottomCollider, leftCollider, rightCollider;
+struct Bound topCollider, bottomCollider, leftCollider, rightCollider;
 
 /////////////
 // Aktuell erzielte Scores der beiden Spieler
@@ -30,19 +30,19 @@ UINTN p1_score, p2_score;
 // -- setupGame --
 // Setup-Methode des Spiels
 //
-void setupGame(Shape *background);
+void setupGame(struct Shape *background);
 
 ///////////////////////
 // -- setupColliders --
 // Methode die die Werte der Collider setzt
 //
-void setupCollider(Shape *background);
+void setupCollider(struct Shape *background);
 
 //////////////////////
 // -- manageBallCol --
 // Methode die die Kollision des Balls abfängt und dessen Bewegungsvektor neu setzt
 //
-void manageBallCol(Shape *ball, Shape *background, Shape *pad_1, Shape *pad_2, Vector *ballMovVec);
+void manageBallCol(struct Shape *ball, struct Shape *background, struct Shape *pad_1, struct Shape *pad_2, struct Vector *ballMovVec);
 
 ////////////////////////
 // -- managePaddleCol --
@@ -51,12 +51,12 @@ void manageBallCol(Shape *ball, Shape *background, Shape *pad_1, Shape *pad_2, V
 // @param xdir: -1 = left
 //		  ydir:  1 = right
 //
-BOOLEAN managePaddleCol(Shape *pad, Shape *ball, Vector *ballMovVec, UINTN xdir);
+BOOLEAN managePaddleCol(struct Shape *pad, struct Shape *ball, struct Vector *ballMovVec, UINTN xdir);
 
 //////////////////
 // -- resetBall --
 // Methode setzt den Ball auf die Anfangsposition zurück
 //
-void resetBall(Shape background, Shape *ball, Vector *moveVec);
+void resetBall(struct Shape background, struct Shape *ball, struct Vector *moveVec);
 
 #endif

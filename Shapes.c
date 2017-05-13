@@ -2,7 +2,7 @@
 
 /////////////////////
 // -- createShape --
-void createShape(Shape *shape, UINTN xPos, UINTN yPos, UINTN width, UINTN height, UINTN p_green, UINTN p_blue, UINTN p_red) {
+void createShape(struct Shape *shape, UINTN xPos, UINTN yPos, UINTN width, UINTN height, UINTN p_green, UINTN p_blue, UINTN p_red) {
 	shape->bound.top = yPos;        // Set y-Position of the shape
 	shape->bound.left = xPos;       // Set x-Position of the shape
 	shape->bound.width = width;     // Set the width of the shape
@@ -14,26 +14,26 @@ void createShape(Shape *shape, UINTN xPos, UINTN yPos, UINTN width, UINTN height
 
 ///////////////////
 // -- drawShape --
-void drawShape(Shape *shape, EFI_GRAPHICS_OUTPUT_PROTOCOL *gop) {
+void drawShape(struct Shape *shape, EFI_GRAPHICS_OUTPUT_PROTOCOL *gop) {
 	gop->Blt(gop, &shape->p_shape, EfiBltVideoFill, 0, 0, shape->bound.left, shape->bound.top, shape->bound.width, shape->bound.height, 0); // draw the paddle 
 }
 
 /////////////////////////
 // -- setShapePosition --
-void setShapePosition(Shape *shape, UINTN posX, UINTN posY) {
+void setShapePosition(struct Shape *shape, UINTN posX, UINTN posY) {
 	shape->bound.top  = posY;
 	shape->bound.left = posX;
 }
 
 ///////////////////
 // -- moveShape --
-void moveShape(Shape *shape, INT32 amountX, INT32 amountY) {
+void moveShape(struct Shape *shape, INT32 amountX, INT32 amountY) {
 	setShapePosition(shape, shape->bound.left + amountX, shape->bound.top + amountY);
 }
 
 ////////////////////
 // -- moveShape_r --
-void moveShape_r(Shape *shape, Shape *background, INT32 amountX, INT32 amountY, EFI_GRAPHICS_OUTPUT_PROTOCOL *gop) {
+void moveShape_r(struct Shape *shape, struct Shape *background, INT32 amountX, INT32 amountY, EFI_GRAPHICS_OUTPUT_PROTOCOL *gop) {
 	gop->Blt(gop, &background->p_shape, EfiBltVideoFill, 0, 0, shape->bound.left, shape->bound.top, shape->bound.width, shape->bound.height, 0);
 	setShapePosition(shape, shape->bound.left + amountX, shape->bound.top + amountY);
 	drawShape(shape, gop);
@@ -41,7 +41,7 @@ void moveShape_r(Shape *shape, Shape *background, INT32 amountX, INT32 amountY, 
 
 //////////////////////////
 // -- checkForCollision --
-BOOLEAN checkForCollision_b(Bound *b1, Bound *b2) {
+BOOLEAN checkForCollision_b(struct Bound *b1, struct Bound *b2) {
 	return checkForCollision(b1->left, b1->top, b1->width, b1->height,
 		b2->left, b2->top, b2->width, b2->height);
 }
